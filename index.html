@@ -1,0 +1,102 @@
+<head>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <!-- JetBrains Mono Font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=JetBrains Mono"
+    rel="stylesheet"
+  />
+
+  <!-- highlight.js -->
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+  <!-- Title -->
+  <title>rithviknishad's portfolio</title>
+</head>
+
+<body>
+  <div class="md:container md:mx-auto px-6 py-10">
+    <div class="flex items-center justify-center screen py-6">
+      <h2
+        class="inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200 py-3"
+      >
+        Hey there 👋
+      </h2>
+    </div>
+    <div class="flex items-center justify-center screen py-6">
+      <!-- Projects Buttons -->
+      <button
+        type="button"
+        class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:ring-lime-200 dark:focus:ring-teal-700 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        onclick="location.href='/projects'"
+      >
+        PROJECTS
+      </button>
+    </div>
+
+    <!-- Code Block -->
+    <!-- TODO: fix border radius not being applied -->
+    <div class="px-8 py-8 flex items-center justify-center screen rounded-lg">
+      <div id="highlighted-code" class="codebg py-4 px-4"></div>
+    </div>
+
+    <!-- Run Code Button -->
+    <div class="py-4 flex items-center justify-center screen">
+      <button
+        type="button"
+        class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        onclick="runCode()"
+      >
+        Run Code Snippet
+      </button>
+    </div>
+    <!-- <input type="button" value="Run" onClick="runCode()" /> -->
+
+    <p
+      class="px-8 py-8 flex items-center justify-center screen rounded-lg"
+      id="console"
+    ></p>
+
+    <!-- <div class="grid grid-cols-1 sm:grid-cols-2">
+      <div
+        class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+      >
+        <div>
+          <span
+            class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+          >
+            <svg
+              class="h-6 w-6 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+            </svg>
+          </span>
+        </div>
+        <h3
+          class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight"
+        >
+          Writes Upside-Down
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+          The Zero Gravity Pen can be used to write in any orientation,
+          including upside-down. It even works in outer space.
+        </p>
+      </div>
+    </div> -->
+  </div>
+</body>
+
+<!-- main.js -->
+<script type="text/javascript" src="main.js"></script>
