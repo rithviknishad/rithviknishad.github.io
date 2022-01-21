@@ -1,4 +1,7 @@
 let runCode = () => {
+  // clear previous output
+  document.getElementById("console-output").innerHTML = "";
+
   let console = {
     log: (val) => {
       let paragraph = document.getElementById("console-output");
@@ -14,9 +17,7 @@ let runCode = () => {
   })({
     name: `Rithvik Nishad`,
     hobbies: [`programming 🖥️`, `thinking 🧠`, `eating 🍲`, `sleeping 😴`],
-    pursuing: `3rd year B. Tech. 
-      Electrical & Electronics Engineering 
-      @Vellore Institute of Technology, Chennai`,
+    pursuing: `3rd year B. Tech.\nElectrical & Electronics Engineering\n@Vellore Institute of Technology, Chennai`,
   });
 };
 
