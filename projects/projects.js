@@ -3,6 +3,8 @@ let projects = [];
 let pendingSources = 3;
 
 let onComplete = () => {
+  document.getElementById("loading").innerHTML = "";
+
   let projectsGrid = document.getElementById("projects");
 
   projects.sort((a, b) => b.last_updated - a.last_updated);
