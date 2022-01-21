@@ -1,0 +1,14 @@
+body {
+  background-color: #080c11;
+  font-family: "JetBrains Mono";
+  font-size: 22px;
+  color: whitesmoke;
+}
+
+.multiline {
+  white-space: pre-wrap;
+}
+
+.codebg {
+  background-color: #0d1117;
+}

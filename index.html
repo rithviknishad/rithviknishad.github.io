@@ -1,0 +1,74 @@
+<head>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <!-- JetBrains Mono Font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=JetBrains Mono"
+    rel="stylesheet"
+  />
+
+  <link href="/css/prism-atom-dark.css" rel="stylesheet" />
+
+  <!-- Title -->
+  <title>rithviknishad's portfolio</title>
+</head>
+
+<body>
+  <div class="md:container md:mx-auto px-6 py-10">
+    <div class="flex items-center justify-center screen py-6">
+      <h2
+        class="inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200 py-3"
+      >
+        Hey there 👋
+      </h2>
+    </div>
+    <div class="flex items-center justify-center screen py-6">
+      <!-- Projects Buttons -->
+      <button
+        type="button"
+        class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:ring-lime-200 dark:focus:ring-teal-700 font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        onclick="location.href='/projects'"
+      >
+        PROJECTS
+      </button>
+    </div>
+
+    <!-- Code Block -->
+    <div class="flex items-center justify-center rounded-lg">
+      <pre class="px-8 py-8 flex rounded-2xl">
+        <code id="highlighted-code" class="language-js py-4 px-4"></code>
+      </pre>
+    </div>
+
+    <!-- Run Code Button -->
+    <div class="py-4 flex items-center justify-center screen">
+      <button
+        type="button"
+        class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        onclick="runCode()"
+      >
+        Run Code Snippet
+      </button>
+    </div>
+
+    <p
+      class="px-8 py-8 flex items-center justify-center screen rounded-lg"
+      id="console-output"
+    ></p>
+  </div>
+
+  <!-- main.js -->
+  <script type="text/javascript" src="main.js"></script>
+
+  <!-- CDN prism.js -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"
+    integrity="sha512-pSVqGtpGygQlhN8ZTHXx1kqkjQr30eM+S6OoSzhHGTjh6DKdfy7WZlo1DNO9bhtM0Imf6xNLznZ7iVC2YUMwJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</body>
