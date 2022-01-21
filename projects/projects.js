@@ -21,7 +21,7 @@ let onComplete = () => {
 
     projectsGrid.innerHTML += `<div class="flex w-full items-center flex justify-center items-center py-12 px-6" ${buttonOnClick}>
     <div>
-      <div class="max-w-xs h-64 flex flex-col justify-between bg-gradient-to-br from-purple-600 to-blue-500 rounded-lg mb-6 py-5 px-4">
+      <div class="max-w-xs h-64 flex flex-col justify-between bg-gradient-to-br from-purple-600 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-lg mb-6 py-5 px-4">
         <div>
           <h4 class="focus:outline-none text-gray-100 font-bold mb-3">
             ${repo.name}
