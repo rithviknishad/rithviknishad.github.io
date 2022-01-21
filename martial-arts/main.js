@@ -24,7 +24,7 @@ let loadImages = (callback) => {
 
     for (let i = 0; i < frames[animation]; ++i) {
       loadImage(
-        `/images/${animation}/${i + 1}.png`,
+        `/martial-arts/images/${animation}/${i + 1}.png`,
         (img) => (images[animation][i] = img)
       );
     }
@@ -73,8 +73,8 @@ loadImages((images) => {
   );
 
   const keyEventCallbacks = {
-    ArrowLeft: () => queuedAnimations.push(actions.Kick),
-    ArrowRight: () => queuedAnimations.push(actions.Punch),
+    k: () => queuedAnimations.push(actions.Kick),
+    p: () => queuedAnimations.push(actions.Punch),
     " ": () => queuedAnimations.push(actions.Block),
     d: () => queuedAnimations.push(actions.Forward),
     a: () => queuedAnimations.push(actions.Backward),

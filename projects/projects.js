@@ -1,6 +1,6 @@
 let projects = [];
 
-let pendingSources = 2;
+let pendingSources = 3;
 
 let onComplete = () => {
   let projectsGrid = document.getElementById("projects");
@@ -59,7 +59,7 @@ let onReceiveResponse = (response) => {
     });
   });
 
-  if (pendingSources === 0) {
+  if (pendingSources <= 0) {
     onComplete();
   }
 };

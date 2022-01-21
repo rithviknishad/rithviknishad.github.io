@@ -1,0 +1,18 @@
+body {
+  background-image: url(images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.canvas {
+  position: relative;
+  left: 10%;
+  bottom: -40%;
+}
+
+.controls {
+  position: relative;
+  left: 80%;
+  bottom: 20%;
+}
