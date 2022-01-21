@@ -11,12 +11,7 @@
     rel="stylesheet"
   />
 
-  <!-- highlight.js -->
-  <link
-    rel="stylesheet"
-    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css"
-  />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <link href="/css/prism-atom-dark.css" rel="stylesheet" />
 
   <!-- Title -->
   <title>rithviknishad's portfolio</title>
@@ -43,9 +38,10 @@
     </div>
 
     <!-- Code Block -->
-    <!-- TODO: fix border radius not being applied -->
-    <div class="px-8 py-8 flex items-center justify-center screen rounded-lg">
-      <div id="highlighted-code" class="codebg py-4 px-4"></div>
+    <div class="flex items-center justify-center rounded-lg">
+      <pre class="px-8 py-8 flex rounded-2xl">
+        <code id="highlighted-code" class="language-js py-4 px-4"></code>
+      </pre>
     </div>
 
     <!-- Run Code Button -->
@@ -58,45 +54,21 @@
         Run Code Snippet
       </button>
     </div>
-    <!-- <input type="button" value="Run" onClick="runCode()" /> -->
 
     <p
       class="px-8 py-8 flex items-center justify-center screen rounded-lg"
-      id="console"
+      id="console-output"
     ></p>
-
-    <!-- <div class="grid grid-cols-1 sm:grid-cols-2">
-      <div
-        class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
-      >
-        <div>
-          <span
-            class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
-          >
-            <svg
-              class="h-6 w-6 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-            </svg>
-          </span>
-        </div>
-        <h3
-          class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight"
-        >
-          Writes Upside-Down
-        </h3>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
-        </p>
-      </div>
-    </div> -->
   </div>
-</body>
 
-<!-- main.js -->
-<script type="text/javascript" src="main.js"></script>
+  <!-- main.js -->
+  <script type="text/javascript" src="main.js"></script>
+
+  <!-- CDN prism.js -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"
+    integrity="sha512-pSVqGtpGygQlhN8ZTHXx1kqkjQr30eM+S6OoSzhHGTjh6DKdfy7WZlo1DNO9bhtM0Imf6xNLznZ7iVC2YUMwJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</body>
