@@ -11,9 +11,15 @@ let onComplete = () => {
 
   projects.forEach((repo) => {
     let desc = repo.description ?? "<i>No description</i>";
-    projectsGrid.innerHTML += `<div class="flex w-full items-center flex justify-center items-center py-12 px-6" onclick="location.href='${
-      repo.url
-    }'">
+    let linkHtml =
+      repo.url === null
+        ? ``
+        : `<div class="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path></svg></div>`;
+
+    let buttonOnClick =
+      repo.url === null ? `` : `onclick="location.href='${repo.url ?? ""}'"`;
+
+    projectsGrid.innerHTML += `<div class="flex w-full items-center flex justify-center items-center py-12 px-6" ${buttonOnClick}>
     <div>
       <div class="max-w-xs h-64 flex flex-col justify-between bg-gradient-to-br from-purple-600 to-blue-500 rounded-lg mb-6 py-5 px-4">
         <div>
@@ -27,13 +33,9 @@ let onComplete = () => {
         <div>
           <div class="flex items-center justify-between text-gray-800">
             <p tabindex="0" class="focus:outline-none text-sm dark:text-gray-100">
-              ${repo.last_updated.toDateString()}
+              updated on <b>${repo.last_updated.toDateString()}</b>
             </p>
-            <div
-              class="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path></svg>
-            </div>
+            ${linkHtml}
           </div>
         </div>
       </div>
@@ -70,10 +72,19 @@ let martialArtsSim = {
   full_name: "martial-arts",
   description: "Martial Arts Sim done for WD101 Course @pupilfirst training.",
   html_url: "/martial-arts",
-  pushed_at: new Date(), // TODO: Replace with some logic?
+  pushed_at: new Date("2022-01-21"),
 };
 
-onReceiveResponse([martialArtsSim]);
+// TODO: remove entry once repo made public, as it'll automaticall be fetched using GitHub API.
+let vaidyutiPrivateProject = {
+  full_name: "Vaidyuti",
+  description:
+    "Vaidyuti is about Decentralized and Autonomous Energy Grid project to provide a framework to manage clusters of DC microgrids.",
+  html_url: null, // Private Repo
+  pushed_at: new Date("2022-01-20"),
+};
+
+onReceiveResponse([martialArtsSim, vaidyutiPrivateProject]);
 
 $.getJSON(
   "https://api.github.com/users/rithviknishad/repos",
