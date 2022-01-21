@@ -23,16 +23,16 @@ let onComplete = () => {
     <div>
       <div class="max-w-xs h-64 flex flex-col justify-between bg-gradient-to-br from-purple-600 to-blue-500 rounded-lg mb-6 py-5 px-4">
         <div>
-          <h4 class="focus:outline-none text-gray-800 dark:text-gray-100 font-bold mb-3">
+          <h4 class="focus:outline-none text-gray-100 font-bold mb-3">
             ${repo.name}
           </h4>
-          <p class="focus:outline-none text-gray-800 dark:text-gray-100 text-sm">
+          <p class="focus:outline-none text-gray-100 text-sm">
             ${desc}
           </p>
         </div>
         <div>
           <div class="flex items-center justify-between text-gray-800">
-            <p tabindex="0" class="focus:outline-none text-sm dark:text-gray-100">
+            <p tabindex="0" class="focus:outline-none text-sm text-gray-100">
               updated on <b>${repo.last_updated.toDateString()}</b>
             </p>
             ${linkHtml}
